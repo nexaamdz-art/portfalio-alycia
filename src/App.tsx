@@ -6,6 +6,8 @@
 import { motion } from 'motion/react';
 import ModelViewer3D from './components/ModelViewer3D';
 import ProjectsSection from './components/ProjectsSection';
+import ServicesRoundCarousel from './components/ServicesRoundCarousel';
+import ContactSection from './components/ContactSection';
 
 export default function App() {
   return (
@@ -102,29 +104,14 @@ export default function App() {
         </div>
       </section>
 
-      {/* 2. About Me Section */}
-      <section
-        id="about-me"
-        aria-label="About Me"
-        className="w-full min-h-screen"
-      />
+      {/* 2. Services Section */}
+      <ServicesRoundCarousel />
 
-      {/* 3. Services Section */}
-      <section
-        id="services"
-        aria-label="Services"
-        className="w-full min-h-screen"
-      />
-
-      {/* 4. Projects Section */}
+      {/* 3. Projects Section */}
       <ProjectsSection />
 
-      {/* 5. Contact Section */}
-      <section
-        id="contact"
-        aria-label="Contact"
-        className="w-full min-h-screen"
-      />
+      {/* 4. Contact Section */}
+      <ContactSection />
     </main>
   );
 }

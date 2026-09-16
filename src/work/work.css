@@ -94,22 +94,49 @@ html, body {
   overflow: hidden;
 }
 
-/* Scrollbar styling for WebGL UI */
-:root {
-  --baropacity: 0.0;
-}
-
-::-webkit-scrollbar {
+/* Main unified page scrollbar - Only for html/body */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #0b0416;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, var(--baropacity, 0.9));
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.4);
   border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.7);
+}
+
+/* Eliminate all internal separate scrollbars completely from Work / Stage */
+#Stage,
+#Stage *,
+.work-stage,
+.work-stage *,
+.FXScroll,
+.FXScroll *,
+#work-experience-root,
+#work-experience-root * {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+#Stage *::-webkit-scrollbar,
+.work-stage *::-webkit-scrollbar,
+.FXScroll *::-webkit-scrollbar,
+#work-experience-root *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
 }
 
 /* Stage interaction & select rules */
@@ -145,6 +172,19 @@ div#Stage textarea,
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+/* Hide any Music Player DOM or sound controls */
+.MusicPlayerDOM,
+[class*="MusicPlayer"],
+[aria-label*="Song"],
+[aria-label*="music" i],
+[aria-label*="audio" i],
+[aria-label*="sound" i] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
 }
 
 /* Safe area insets for mobile notched devices */

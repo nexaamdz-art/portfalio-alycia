@@ -19,6 +19,7 @@ export const WorkExperience = memo(function WorkExperience({
   onProjectClose,
   className = '',
   style,
+  progress,
 }: WorkExperienceProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const selectCallbackRef = useRef(onProjectSelect);
@@ -28,7 +29,32 @@ export const WorkExperience = memo(function WorkExperience({
   selectCallbackRef.current = onProjectSelect;
   closeCallbackRef.current = onProjectClose;
 
+  // Synchronize normalized progress (0.0 to 1.0) with the internal 3D scroll controller
   useEffect(() => {
+    if (typeof progress !== 'number') return;
+    const stageEl = document.getElementById('Stage');
+    if (!stageEl) return;
+
+    // Find all scrollable elements inside Stage (such as the FXScroll container)
+    const scrollContainers = stageEl.querySelectorAll<HTMLElement>('*');
+    for (let i = 0; i < scrollContainers.length; i++) {
+      const el = scrollContainers[i];
+      if (el.scrollHeight > el.clientHeight && el.clientHeight > 0) {
+        const maxScroll = el.scrollHeight - el.clientHeight;
+        el.scrollTop = progress * maxScroll;
+      }
+    }
+  }, [progress]);
+
+  useEffect(() => {
+    const handleStageWheel = (e: WheelEvent) => {
+      // When 3D project detail is not open, forward wheel to window so main page scrolls
+      if (!isDetailOpenRef.current) {
+        e.preventDefault();
+        window.scrollBy({ top: e.deltaY, behavior: 'auto' });
+      }
+    };
+
     const updateStageVisibility = (inView: boolean) => {
       const stageEl = document.getElementById('Stage');
       if (stageEl) {
@@ -53,6 +79,11 @@ export const WorkExperience = memo(function WorkExperience({
           containerRef.current.appendChild(stageEl);
         }
         updateStageVisibility(isInViewport);
+
+        if (!(stageEl as any).__wheelBound) {
+          (stageEl as any).__wheelBound = true;
+          stageEl.addEventListener('wheel', handleStageWheel, { passive: false });
+        }
       }
     }, 250);
 
@@ -76,6 +107,13 @@ export const WorkExperience = memo(function WorkExperience({
       setupWorkRuntime(baseRoute, projects, DEFAULT_WORK_CONFIG);
       ensurePreload(DEFAULT_WORK_CONFIG.preloadLinkId, DEFAULT_WORK_CONFIG.appScriptPath);
       ensureScript(DEFAULT_WORK_CONFIG.appScriptId, DEFAULT_WORK_CONFIG.appScriptPath).then(() => {
+        if ((window as any).AppState) {
+          (window as any).AppState.set('hasMusic', false);
+          (window as any).AppState.set('Global/audioEnabled', false);
+        }
+        if ((window as any).Tests) {
+          (window as any).Tests.noMusic = () => true;
+        }
         updateStageVisibility(isInViewport);
         if (initialSlug) {
           setTimeout(() => {

@@ -80,6 +80,12 @@ export interface WorkExperienceProps {
    * Whether background audio is allowed. Default: true.
    */
   soundEnabled?: boolean;
+
+  /**
+   * Normalized scroll progress (0.0 to 1.0) along the main page scrollbar
+   * to distribute the 3D model rotation across the page length.
+   */
+  progress?: number;
 }
 
 export interface WorkConfig {

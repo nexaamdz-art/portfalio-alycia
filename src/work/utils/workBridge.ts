@@ -102,6 +102,44 @@ export function setupWorkRuntime(
       return originalReplaceState.apply(this, arguments as any);
     };
   }
+
+  // Completely disable music and sound across the 3D runtime
+  if (!(window as any)._musicDisabledPatched) {
+    (window as any)._musicDisabledPatched = true;
+    if ((window as any).Tests) {
+      (window as any).Tests.noMusic = () => true;
+    } else {
+      let internalTests: unknown = null;
+      Object.defineProperty(window, 'Tests', {
+        configurable: true,
+        enumerable: true,
+        get() {
+          return internalTests;
+        },
+        set(val) {
+          if (val) {
+            val.noMusic = () => true;
+            if (val.prototype) {
+              val.prototype.noMusic = () => true;
+            }
+          }
+          internalTests = val;
+        },
+      });
+    }
+
+    // Silence any HTMLAudioElement playing music
+    const originalPlay = HTMLAudioElement.prototype.play;
+    HTMLAudioElement.prototype.play = function () {
+      const src = this.src || '';
+      if (src.includes('music') || src.includes('.mp3')) {
+        this.pause();
+        this.muted = true;
+        return Promise.resolve();
+      }
+      return originalPlay.apply(this, arguments as unknown as []);
+    };
+  }
 }
 
 /**
