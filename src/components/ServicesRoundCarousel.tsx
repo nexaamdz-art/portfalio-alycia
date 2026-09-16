@@ -174,7 +174,7 @@ export default function ServicesRoundCarousel({
   };
 
   return (
-    <section id="services" className="w-full py-24 flex flex-col items-center justify-center min-h-screen relative z-10" dir="ltr">
+    <section id="services" className="w-full py-24 flex flex-col items-center justify-center min-h-screen relative z-10 px-6 sm:px-10 lg:px-12 xl:px-16" dir="ltr">
       {/* Header Section */}
       <div className="text-center mb-16 px-4 max-w-2xl relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
