@@ -154,7 +154,7 @@ export default function ProjectsSection({
       id="projects"
       aria-label="Featured Projects"
       dir="ltr"
-      className="w-full py-28 px-6 sm:px-10 lg:px-12 xl:px-16 relative z-10 flex flex-col items-center justify-center bg-[#311432] overflow-hidden"
+      className="w-full py-28 px-6 sm:px-10 lg:px-12 xl:px-16 relative z-10 flex flex-col items-center justify-center bg-transparent overflow-hidden"
     >
       {/* Background ambient radial glow matching dark purple palette */}
       <div

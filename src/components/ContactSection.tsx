@@ -21,7 +21,7 @@ export default function ContactSection() {
       id="contact"
       aria-label="Contact"
       dir="ltr"
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#311432] py-24 px-6 sm:px-10 lg:px-12 xl:px-16"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-transparent py-24 px-6 sm:px-10 lg:px-12 xl:px-16"
     >
       {/* Glassmorphism Form Container */}
       <motion.div

@@ -154,7 +154,7 @@ export default function ServicesSection() {
       id="services"
       aria-label="Services"
       dir="ltr"
-      className="w-full py-28 px-6 sm:px-10 lg:px-12 xl:px-16 relative z-10 flex flex-col items-center justify-center bg-[#311432]"
+      className="w-full py-28 px-6 sm:px-10 lg:px-12 xl:px-16 relative z-10 flex flex-col items-center justify-center bg-transparent"
     >
       {/* Background ambient radial glow */}
       <div

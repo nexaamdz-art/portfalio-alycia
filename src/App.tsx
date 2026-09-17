@@ -4,6 +4,7 @@
  */
 
 import { motion, useScroll, useSpring } from 'motion/react';
+import GeometricTechBG from './components/GeometricTechBG';
 import ModelViewer3D from './components/ModelViewer3D';
 import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
@@ -21,8 +22,11 @@ export default function App() {
     <main
       id="main-content"
       dir="ltr"
-      className="w-full min-h-screen bg-[#311432] selection:bg-purple-600/30 selection:text-white overflow-x-hidden text-slate-100"
+      className="w-full min-h-screen bg-[#311432] selection:bg-purple-600/30 selection:text-white overflow-x-hidden text-slate-100 relative"
     >
+      {/* Subtle, glowing geometric lines and faint tech background */}
+      <GeometricTechBG />
+
       {/* Scroll Progress Bar */}
       <motion.div
         id="scroll-progress-bar"
@@ -35,13 +39,13 @@ export default function App() {
         id="home"
         aria-label="Home"
         dir="ltr"
-        className="w-full min-h-screen flex items-center justify-between px-6 sm:px-10 lg:px-12 xl:px-16 relative overflow-hidden bg-[#311432]"
+        className="w-full min-h-screen flex items-center justify-between px-6 sm:px-10 lg:px-12 xl:px-16 relative overflow-hidden bg-transparent"
       >
         {/* Subtle cinematic ambient glow on the left */}
         <div
           id="hero-ambient-glow"
           aria-hidden="true"
-          className="absolute -left-24 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"
+          className="absolute -left-24 top-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl pointer-events-none"
         />
 
         {/* Content container: text aligned to far left, 3D model to far right */}
