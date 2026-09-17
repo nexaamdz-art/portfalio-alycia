@@ -113,7 +113,7 @@ function ServiceCard({ service, index }: TiltCardProps) {
             ? 'transform 0.1s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out'
             : 'transform 0.5s ease-out, box-shadow 0.5s ease-out, border-color 0.5s ease-out',
         }}
-        className={`relative group flex items-center gap-5 p-6 rounded-2xl bg-[#130924]/80 backdrop-blur-md border cursor-pointer select-none transition-all duration-300 ${
+        className={`relative group flex items-center gap-5 p-6 rounded-2xl bg-[#240d25]/85 backdrop-blur-md border cursor-pointer select-none transition-all duration-300 ${
           isHovered
             ? 'border-transparent shadow-[0_0_30px_rgba(147,51,234,0.45),0_0_15px_rgba(219,39,119,0.3)]'
             : 'border-white/10 hover:border-purple-500/30'
@@ -130,7 +130,7 @@ function ServiceCard({ service, index }: TiltCardProps) {
         {/* Inner background mask to preserve card body darkness */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 rounded-2xl bg-[#130924] -z-[5] pointer-events-none"
+          className="absolute inset-0 rounded-2xl bg-[#240d25] -z-[5] pointer-events-none"
         />
 
         {/* Gradient Icon Badge */}
@@ -154,7 +154,7 @@ export default function ServicesSection() {
       id="services"
       aria-label="Services"
       dir="ltr"
-      className="w-full py-28 px-6 sm:px-10 lg:px-12 xl:px-16 relative z-10 flex flex-col items-center justify-center bg-[#0b0416]"
+      className="w-full py-28 px-6 sm:px-10 lg:px-12 xl:px-16 relative z-10 flex flex-col items-center justify-center bg-[#311432]"
     >
       {/* Background ambient radial glow */}
       <div
@@ -165,9 +165,9 @@ export default function ServicesSection() {
       {/* Section Header */}
       <div className="text-center mb-16 max-w-2xl relative z-10">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight"
         >
@@ -176,8 +176,8 @@ export default function ServicesSection() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.8, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
           className="text-slate-400 text-sm md:text-base leading-relaxed max-w-lg mx-auto"
         >
           End-to-end digital expertise engineered to bring visionary products and immersive experiences to life.

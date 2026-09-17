@@ -154,7 +154,7 @@ export default function ProjectsSection({
       id="projects"
       aria-label="Featured Projects"
       dir="ltr"
-      className="w-full py-28 px-6 sm:px-10 lg:px-12 xl:px-16 relative z-10 flex flex-col items-center justify-center bg-[#0b0416] overflow-hidden"
+      className="w-full py-28 px-6 sm:px-10 lg:px-12 xl:px-16 relative z-10 flex flex-col items-center justify-center bg-[#311432] overflow-hidden"
     >
       {/* Background ambient radial glow matching dark purple palette */}
       <div
@@ -252,7 +252,7 @@ export default function ProjectsSection({
                       backfaceVisibility: 'hidden',
                       boxShadow: '0 20px 45px rgba(0,0,0,0.65), 0 0 20px rgba(147, 51, 234, 0.2)',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
-                      backgroundColor: '#110724',
+                      backgroundColor: '#240d25',
                     }}
                     className="flex flex-col justify-between group transition-all duration-300"
                   >
@@ -265,7 +265,7 @@ export default function ProjectsSection({
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-75 group-hover:brightness-90"
                       />
                       {/* Dark Purple Gradient Overlay for seamless legibility */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0b0416] via-[#0b0416]/75 to-black/30" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#311432] via-[#311432]/75 to-black/30" />
                     </div>
 
                     {/* Top Content: Badges */}

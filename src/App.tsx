@@ -3,25 +3,39 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
+import { motion, useScroll, useSpring } from 'motion/react';
 import ModelViewer3D from './components/ModelViewer3D';
 import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 
 export default function App() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <main
       id="main-content"
       dir="ltr"
-      className="w-full min-h-screen bg-[#0b0416] selection:bg-purple-600/30 selection:text-white overflow-x-hidden text-slate-100"
+      className="w-full min-h-screen bg-[#311432] selection:bg-purple-600/30 selection:text-white overflow-x-hidden text-slate-100"
     >
+      {/* Scroll Progress Bar */}
+      <motion.div
+        id="scroll-progress-bar"
+        style={{ scaleX, transformOrigin: '0%' }}
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 z-50 shadow-[0_0_10px_rgba(219,39,119,0.5)] pointer-events-none"
+      />
+
       {/* 1. Home Section — Exactly as configured */}
       <section
         id="home"
         aria-label="Home"
         dir="ltr"
-        className="w-full min-h-screen flex items-center justify-between px-6 sm:px-10 lg:px-12 xl:px-16 relative overflow-hidden bg-[#0b0416]"
+        className="w-full min-h-screen flex items-center justify-between px-6 sm:px-10 lg:px-12 xl:px-16 relative overflow-hidden bg-[#311432]"
       >
         {/* Subtle cinematic ambient glow on the left */}
         <div

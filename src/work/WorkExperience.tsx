@@ -198,7 +198,7 @@ export const WorkExperience = memo(function WorkExperience({
     <div
       ref={containerRef}
       id="work-experience-root"
-      className={`work-experience-container relative w-full h-full min-h-screen overflow-hidden bg-[#0b0416] border-0 border-none outline-none ${className}`}
+      className={`work-experience-container relative w-full h-full min-h-screen overflow-hidden bg-[#311432] border-0 border-none outline-none ${className}`}
       style={style}
     />
   );
