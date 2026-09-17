@@ -175,10 +175,10 @@ export default function ContactSection() {
             <span>Email:</span>
             <a
               id="contact-email-link"
-              href="mailto:contact@alycia.dev"
+              href="mailto:nexa.am.dz@gmail.com"
               className="font-sans-modern font-semibold text-pink-300 hover:text-pink-200 underline decoration-pink-400/40 underline-offset-4 transition-colors"
             >
-              contact@alycia.dev
+              nexa.am.dz@gmail.com
             </a>
           </div>
 
