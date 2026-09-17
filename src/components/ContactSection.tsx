@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Send, Mail, CheckCircle2, Instagram } from 'lucide-react';
+import { Send, Mail, CheckCircle2, Instagram, Github } from 'lucide-react';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -182,17 +182,31 @@ export default function ContactSection() {
             </a>
           </div>
 
-          <a
-            id="contact-instagram-link"
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-pink-300 transition-all text-xs font-medium group cursor-pointer"
-          >
-            <Instagram className="w-4 h-4 text-pink-400 group-hover:scale-110 transition-transform" />
-            <span>Instagram</span>
-          </a>
+          <div className="flex items-center gap-2.5">
+            <a
+              id="contact-github-link"
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-purple-300 transition-all text-xs font-medium group cursor-pointer"
+            >
+              <Github className="w-4 h-4 text-purple-400 group-hover:scale-110 transition-transform" />
+              <span>GitHub</span>
+            </a>
+
+            <a
+              id="contact-instagram-link"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-pink-300 transition-all text-xs font-medium group cursor-pointer"
+            >
+              <Instagram className="w-4 h-4 text-pink-400 group-hover:scale-110 transition-transform" />
+              <span>Instagram</span>
+            </a>
+          </div>
         </motion.div>
       </motion.div>
     </section>
