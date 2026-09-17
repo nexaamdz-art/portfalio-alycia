@@ -5,21 +5,23 @@
 
 import { motion } from 'motion/react';
 import ModelViewer3D from './components/ModelViewer3D';
+import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
-import ServicesRoundCarousel from './components/ServicesRoundCarousel';
 import ContactSection from './components/ContactSection';
 
 export default function App() {
   return (
     <main
       id="main-content"
-      className="w-full min-h-screen bg-[#0b0416] selection:bg-purple-600/30 selection:text-white"
+      dir="ltr"
+      className="w-full min-h-screen bg-[#0b0416] selection:bg-purple-600/30 selection:text-white overflow-x-hidden text-slate-100"
     >
-      {/* 1. Home Section */}
+      {/* 1. Home Section — Exactly as configured */}
       <section
         id="home"
         aria-label="Home"
-        className="w-full min-h-screen flex items-center justify-between px-6 sm:px-10 lg:px-12 xl:px-16 relative overflow-hidden"
+        dir="ltr"
+        className="w-full min-h-screen flex items-center justify-between px-6 sm:px-10 lg:px-12 xl:px-16 relative overflow-hidden bg-[#0b0416]"
       >
         {/* Subtle cinematic ambient glow on the left */}
         <div
@@ -104,15 +106,14 @@ export default function App() {
         </div>
       </section>
 
-      {/* 2. Services Section */}
-      <ServicesRoundCarousel />
+      {/* 2. Services Section — 6 services grid with staggered fade-up & mouse 3D tilt with purple-to-pink gradient glow */}
+      <ServicesSection />
 
-      {/* 3. Projects Section */}
+      {/* 3. Projects Section — 3D Round Carousel with continuous rotation, manual drag, dark purple background, actual project images */}
       <ProjectsSection />
 
-      {/* 4. Contact Section */}
+      {/* 4. Contact Section — Glassmorphism form with purple-to-pink gradient send button and cosmic background */}
       <ContactSection />
     </main>
   );
 }
-
