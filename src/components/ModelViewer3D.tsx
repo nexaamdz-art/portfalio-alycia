@@ -83,8 +83,7 @@ export default function ModelViewer3D({
     controls.dampingFactor = 0.05;
     controls.enableZoom = false;
     controls.enablePan = false;
-    controls.autoRotate = true;
-    controls.autoRotateSpeed = 1.2;
+    controls.autoRotate = false;
     controls.minPolarAngle = Math.PI / 4;
     controls.maxPolarAngle = Math.PI / 1.8;
     // Allow touch vertical page scrolling on phones
