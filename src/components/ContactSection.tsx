@@ -29,7 +29,7 @@ export default function ContactSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 w-full max-w-xl p-8 sm:p-10 md:p-12 rounded-3xl bg-[#240d25]/80 backdrop-blur-xl border border-white/15 shadow-2xl shadow-purple-950/60 text-left"
+        className="relative z-10 w-full max-w-xl p-5 sm:p-10 md:p-12 rounded-3xl bg-[#240d25]/80 backdrop-blur-xl border border-white/15 shadow-2xl shadow-purple-950/60 text-left"
       >
         {/* Header */}
         <div className="text-center mb-8">
@@ -47,7 +47,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.75, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
-            className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-md mx-auto"
+            className="text-slate-300 text-xs sm:text-base leading-relaxed max-w-md mx-auto"
           >
             Have a project in mind or want to collaborate? Send me a message and let's create something extraordinary together.
           </motion.p>
@@ -58,7 +58,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, scale: 0.95, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="p-8 rounded-2xl bg-purple-950/40 border border-purple-500/30 text-center flex flex-col items-center gap-3"
+            className="p-6 sm:p-8 rounded-2xl bg-purple-950/40 border border-purple-500/30 text-center flex flex-col items-center gap-3"
           >
             <CheckCircle2 className="w-12 h-12 text-pink-400" />
             <h3 className="text-xl font-bold text-white">Message Sent Successfully</h3>
@@ -77,7 +77,7 @@ export default function ContactSection() {
           </motion.div>
         ) : (
           /* Contact Form */
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export default function ContactSection() {
                 placeholder="Jane Doe"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all text-sm"
+                className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all text-base sm:text-sm"
               />
             </motion.div>
 
@@ -120,7 +120,7 @@ export default function ContactSection() {
                 placeholder="jane@example.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all text-sm"
+                className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all text-base sm:text-sm"
               />
             </motion.div>
 
@@ -143,7 +143,7 @@ export default function ContactSection() {
                 placeholder="Tell me about your project or idea..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all text-sm resize-none"
+                className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all text-base sm:text-sm resize-none"
               />
             </motion.div>
 

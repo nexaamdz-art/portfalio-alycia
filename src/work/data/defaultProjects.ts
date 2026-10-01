@@ -2,6 +2,23 @@ import type { WorkProject } from '../types';
 
 export const DEFAULT_WORK_PROJECTS: WorkProject[] = [
   {
+    title: 'Hijab Soul (روح الحجاب)',
+    perma: 'hijab-soul',
+    subhead: 'Algerian Modest Fashion Boutique & E-Commerce Platform with 58-Wilaya Delivery & COD.',
+    body: 'A modern, high-performance Algerian e-commerce platform dedicated to modest fashion (Abayas, Dresses, Isdalat, Hijabs, and Accessories). Features full 58-Wilaya dynamic Algerian delivery rate calculation (Home & Desk delivery), real-time cart & COD (Cash On Delivery) checkout, live customer support chat, and a comprehensive Admin Dashboard for inventory, order tracking, category management, and analytics.',
+    clientName: 'Algerian Fashion Boutique',
+    date: '2024\nALGERIA D2C\nE-COMMERCE & FULL-STACK',
+    color: '059669',
+    priority: 1,
+    tags: 'React, TypeScript, TanStack Router, Tailwind CSS, Node.js, Express, 58-Wilaya COD, Arabic RTL, DZD Currency',
+    seo: 'Hijab Soul Algerian Modest Fashion Boutique & E-Commerce Platform',
+    projectLogo: '/assets/images/hijab-soul-icon.jpg',
+    thumbnailURL: '/assets/images/hijab-soul-cover.jpg',
+    videoURL: '/assets/video/reel.mp4',
+    caseStudyURL: 'https://hijab-soul-aesthetics-delta.vercel.app/',
+    projectURL: 'https://hijab-soul-aesthetics-delta.vercel.app/',
+  },
+  {
     title: 'Museum of Weed',
     perma: 'museum-of-weed',
     subhead: 'An interactive 30-foot timeline and spatial exhibition powered by real-time computer vision.',

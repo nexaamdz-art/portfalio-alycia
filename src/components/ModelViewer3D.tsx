@@ -83,9 +83,12 @@ export default function ModelViewer3D({
     controls.dampingFactor = 0.05;
     controls.enableZoom = false;
     controls.enablePan = false;
-    controls.autoRotate = false;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1.2;
     controls.minPolarAngle = Math.PI / 4;
     controls.maxPolarAngle = Math.PI / 1.8;
+    // Allow touch vertical page scrolling on phones
+    renderer.domElement.style.touchAction = 'pan-y';
 
     // 5. Cinematic Lighting
     const ambientLight = new THREE.AmbientLight(0x818cf8, 1.6);
@@ -402,7 +405,7 @@ export default function ModelViewer3D({
   return (
     <div
       id="hero-3d-wrapper"
-      className={`relative w-full h-[480px] sm:h-[550px] lg:h-[650px] xl:h-[720px] flex items-center justify-center ${className}`}
+      className={`relative w-full h-[360px] sm:h-[480px] lg:h-[620px] xl:h-[700px] flex items-center justify-center ${className}`}
     >
       {/* Background radial blue/purple glow behind the 3D model */}
       <div

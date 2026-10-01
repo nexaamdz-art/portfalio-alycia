@@ -39,7 +39,7 @@ export default function App() {
         id="home"
         aria-label="Home"
         dir="ltr"
-        className="w-full min-h-screen flex items-center justify-between px-6 sm:px-10 lg:px-12 xl:px-16 relative overflow-hidden bg-transparent"
+        className="w-full min-h-screen flex items-center justify-between px-5 sm:px-10 lg:px-12 xl:px-16 relative overflow-hidden bg-transparent pt-8 sm:pt-0"
       >
         {/* Subtle cinematic ambient glow on the left */}
         <div
@@ -51,7 +51,7 @@ export default function App() {
         {/* Content container: text aligned to far left, 3D model to far right */}
         <div
           id="hero-content-wrapper"
-          className="w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 py-8 lg:py-12 z-10"
+          className="w-full flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12 py-8 lg:py-12 z-10"
         >
           {/* Text Group: positioned at the far left, vertically centered */}
           <motion.div
@@ -60,7 +60,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
             dir="ltr"
-            className="w-full lg:w-auto lg:max-w-md xl:max-w-lg flex flex-col items-start text-left z-10 select-none shrink-0 -mt-10 sm:-mt-14 lg:-mt-20"
+            className="w-full lg:w-auto lg:max-w-md xl:max-w-lg flex flex-col items-start text-left z-10 select-none shrink-0 mt-4 sm:mt-0 lg:-mt-20"
           >
             {/* Greeting: Luxurious serif */}
             <motion.h2
@@ -68,8 +68,7 @@ export default function App() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              style={{ fontSize: '43px', lineHeight: '57px' }}
-              className="font-serif-luxury font-light tracking-wide text-white glow-blue-subtle mb-1 sm:mb-2"
+              className="font-serif-luxury font-light tracking-wide text-white glow-blue-subtle mb-1 sm:mb-2 text-3xl sm:text-4xl lg:text-[43px] leading-snug sm:leading-[57px]"
             >
               Hi, I’m
             </motion.h2>
@@ -80,8 +79,7 @@ export default function App() {
               initial={{ opacity: 0, y: 45 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
-              style={{ lineHeight: '129.8px' }}
-              className="font-script text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-normal text-white glow-blue-soft tracking-tight -ml-1 sm:-ml-2 mb-6 sm:mb-8"
+              className="font-script text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-normal text-white glow-blue-soft tracking-tight -ml-1 sm:-ml-2 mb-4 sm:mb-8 leading-tight sm:leading-[129.8px]"
             >
               Alycia
             </motion.h1>
@@ -92,7 +90,7 @@ export default function App() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="font-sans-modern text-sm sm:text-base md:text-lg font-medium text-slate-100/90 tracking-wider uppercase glow-blue-subtle mb-4 sm:mb-5"
+              className="font-sans-modern text-xs sm:text-base md:text-lg font-medium text-slate-100/90 tracking-wider uppercase glow-blue-subtle mb-3 sm:mb-5"
             >
               Creative Developer &amp; UI/UX Designer
             </motion.p>
