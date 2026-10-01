@@ -41,7 +41,7 @@ export default function GeometricTechBG() {
         className="absolute top-1/2 right-[18%] -translate-y-1/2 w-[650px] h-[750px] rounded-full pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(147, 51, 234, 0.26) 0%, rgba(107, 33, 168, 0.16) 45%, rgba(49, 20, 50, 0) 75%)',
+            'radial-gradient(ellipse at center, rgba(147, 51, 234, 0.22) 0%, rgba(107, 33, 168, 0.12) 45%, rgba(25, 7, 28, 0) 75%)',
           filter: 'blur(45px)',
         }}
       />
@@ -50,7 +50,7 @@ export default function GeometricTechBG() {
         className="absolute top-10 left-[35%] w-[500px] h-[400px] rounded-full pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle, rgba(192, 132, 252, 0.12) 0%, rgba(49, 20, 50, 0) 70%)',
+            'radial-gradient(circle, rgba(192, 132, 252, 0.10) 0%, rgba(25, 7, 28, 0) 70%)',
           filter: 'blur(50px)',
         }}
       />

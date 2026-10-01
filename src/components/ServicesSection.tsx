@@ -113,7 +113,7 @@ function ServiceCard({ service, index }: TiltCardProps) {
             ? 'transform 0.1s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out'
             : 'transform 0.5s ease-out, box-shadow 0.5s ease-out, border-color 0.5s ease-out',
         }}
-        className={`relative group flex items-center gap-5 p-6 rounded-2xl bg-[#240d25]/85 backdrop-blur-md border cursor-pointer select-none transition-all duration-300 ${
+        className={`relative group flex items-center gap-5 p-6 rounded-2xl bg-[#130514]/90 backdrop-blur-md border cursor-pointer select-none transition-all duration-300 ${
           isHovered
             ? 'border-transparent shadow-[0_0_30px_rgba(147,51,234,0.45),0_0_15px_rgba(219,39,119,0.3)]'
             : 'border-white/10 hover:border-purple-500/30'
@@ -130,7 +130,7 @@ function ServiceCard({ service, index }: TiltCardProps) {
         {/* Inner background mask to preserve card body darkness */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 rounded-2xl bg-[#240d25] -z-[5] pointer-events-none"
+          className="absolute inset-0 rounded-2xl bg-[#130514] -z-[5] pointer-events-none"
         />
 
         {/* Gradient Icon Badge */}

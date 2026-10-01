@@ -329,7 +329,7 @@ export default function ProjectsSection({
                       backfaceVisibility: 'hidden',
                       boxShadow: '0 20px 45px rgba(0,0,0,0.65), 0 0 20px rgba(147, 51, 234, 0.2)',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
-                      backgroundColor: '#240d25',
+                      backgroundColor: '#130514',
                     }}
                     className="flex flex-col justify-between group transition-all duration-300 hover:border-purple-400/50"
                   >
@@ -342,7 +342,7 @@ export default function ProjectsSection({
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-75 group-hover:brightness-90"
                       />
                       {/* Dark Purple Gradient Overlay for seamless legibility */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#311432] via-[#311432]/75 to-black/30" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#19071c] via-[#19071c]/80 to-black/30" />
                     </div>
 
                     {/* Top Content: Badges */}
@@ -449,7 +449,7 @@ export default function ProjectsSection({
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#260f27] border border-purple-500/30 rounded-2xl shadow-2xl text-slate-100 p-5 sm:p-8"
+              className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#160618] border border-purple-500/30 rounded-2xl shadow-2xl text-slate-100 p-5 sm:p-8"
             >
               {/* Close Button */}
               <button
@@ -495,7 +495,7 @@ export default function ProjectsSection({
                   alt={selectedProject.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#260f27] via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#160618] via-transparent to-transparent" />
               </div>
 
               {/* Full Description & Overview */}

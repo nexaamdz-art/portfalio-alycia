@@ -29,7 +29,7 @@ export default function ContactSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 w-full max-w-xl p-5 sm:p-10 md:p-12 rounded-3xl bg-[#240d25]/80 backdrop-blur-xl border border-white/15 shadow-2xl shadow-purple-950/60 text-left"
+        className="relative z-10 w-full max-w-xl p-5 sm:p-10 md:p-12 rounded-3xl bg-[#130514]/85 backdrop-blur-xl border border-white/15 shadow-2xl shadow-purple-950/60 text-left"
       >
         {/* Header */}
         <div className="text-center mb-8">
